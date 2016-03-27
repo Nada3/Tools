@@ -33,7 +33,7 @@ for ext in BACKUPS_EXT:
 
 for fld in BACKUPS_FOLDERS:
 
-	back_path = os.path.dirname(path)
+	back_path = fld + os.path.dirname(path)
 
 	http = httplib.HTTPConnection(host, 80)
 	http.request('GET', back_path)
